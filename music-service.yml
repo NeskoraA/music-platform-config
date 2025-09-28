@@ -1,4 +1,4 @@
-# music-service.yml в Git репозитории
+# music-service.yml в Git
 server:
   port: 8081
 
