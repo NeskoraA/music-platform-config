@@ -1,4 +1,3 @@
-# api-gateway.yml в Git
 server:
   port: 8080
 
@@ -11,17 +10,17 @@ spring:
           lower-case-service-id: true
       routes:
         - id: music-service
-          uri: lb://music-service
+          uri: lb://MUSIC-SERVICE  # ИСПРАВИТЬ НА ЗАГЛАВНЫЕ
           predicates:
             - Path=/api/music/**
           filters:
-            - StripPrefix=1 
+            - StripPrefix=1
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,gateway,metrics
+        include: "*"  
   endpoint:
     gateway:
       enabled: true
@@ -30,6 +29,7 @@ management:
 
 logging:
   level:
-    org.springframework.cloud.gateway: TRACE
-    org.springframework.cloud.loadbalancer: TRACE
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
+    org.springframework.cloud.client.loadbalancer: DEBUG
     org.springframework.cloud.loadbalancer: DEBUG
