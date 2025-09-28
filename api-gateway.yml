@@ -1,3 +1,4 @@
+# api-gateway.yml в Git
 server:
   port: 8080
 
@@ -14,7 +15,7 @@ spring:
           predicates:
             - Path=/api/music/**
           filters:
-            - StripPrefix=1  
+            - StripPrefix=1 
 
 management:
   endpoints:
@@ -29,5 +30,6 @@ management:
 
 logging:
   level:
-    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.loadbalancer: TRACE
     org.springframework.cloud.loadbalancer: DEBUG
