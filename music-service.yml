@@ -1,3 +1,4 @@
+# music-service.yml в Git репозитории
 server:
   port: 8081
 
@@ -27,3 +28,8 @@ spotify:
     url: https://api.spotify.com/v1
   auth:
     url: https://accounts.spotify.com/api/token
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
