@@ -12,3 +12,6 @@ spring:
           uri: https://github.com/NeskoraA/music-platform-config.git
           clone-on-start: true
           default-label: main
+          search-paths: 
+            - '/'           # Искать в корне
+            - '{application}' # Искать в папках с именем приложения
