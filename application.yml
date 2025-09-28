@@ -1,3 +1,4 @@
+# application.yml в Git - ОБЩИЕ настройки
 eureka:
   client:
     service-url:
