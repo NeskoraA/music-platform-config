@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   cloud:
     gateway:
@@ -10,12 +13,21 @@ spring:
           uri: lb://music-service
           predicates:
             - Path=/api/music/**
+          filters:
+            - StripPrefix=1  
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,gateway
+        include: health,info,gateway,metrics
   endpoint:
     gateway:
       enabled: true
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
