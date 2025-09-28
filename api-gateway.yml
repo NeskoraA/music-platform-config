@@ -9,11 +9,8 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true  # ← ЭТОЙ СТРОЧКИ НЕ ХВАТАЕТ!
       routes:
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/api/users/**
         - id: music-service
           uri: lb://music-service
           predicates:
@@ -23,4 +20,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,gateway  # ← добавил gateway для диагностики
