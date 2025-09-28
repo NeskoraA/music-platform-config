@@ -14,4 +14,4 @@ spring:
           default-label: main
           search-paths: 
             - '/'           # Искать в корне
-            - '{application}' # Искать в папках с именем приложения
+            - '{application}' # Искать в папках
