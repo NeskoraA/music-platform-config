@@ -1,3 +1,4 @@
+# discovery-server.yml в Git
 server:
   port: 8761
 
