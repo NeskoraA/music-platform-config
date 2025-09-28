@@ -1,15 +1,10 @@
-server:
-  port: 8080
-
 spring:
-  application:
-    name: api-gateway
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id: true  # ← ЭТОЙ СТРОЧКИ НЕ ХВАТАЕТ!
+          lower-case-service-id: true
       routes:
         - id: music-service
           uri: lb://music-service
@@ -20,4 +15,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,gateway  # ← добавил gateway для диагностики
+        include: health,info,gateway
