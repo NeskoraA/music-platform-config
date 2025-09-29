@@ -28,6 +28,7 @@ spotify:
   client:
     id: ${SPOTIFY_CLIENT_ID:3b72d6c465bf4859b93d959032307d3e}
     secret: ${SPOTIFY_CLIENT_SECRET:71b6f1d77dbe4aa8bd10065627e6cc67}
+    
   api:
     url: https://api.spotify.com/v1
   auth:
