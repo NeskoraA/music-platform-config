@@ -22,8 +22,8 @@ logging:
 
 spotify:
   client:
-    id: ${SPOTIFY_CLIENT_ID:ca0b9e1b0a3645c9913c270259ec0aeb}
-    secret: ${SPOTIFY_CLIENT_SECRET:24df841663744a2a9bd2ee8dfa2b0118}
+    id: ca0b9e1b0a3645c9913c270259ec0aeb
+    secret: 24df841663744a2a9bd2ee8dfa2b0118
   api:
     url: https://api.spotify.com/v1
   auth:
